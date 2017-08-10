@@ -1,16 +1,21 @@
-# Big 0 Notation: Part 1
+# Big 0 Notation: 
+
+## Release 0 : What is Big-O?
+
+_The examples used in the first two articles are in python. I know you probably don't know python. That's okay. The syntax is very similar to ruby, but more importantly I think he does a good job explaining what big O is, and how it works._
 
 1. Read [Big-O notation explained by a self-taught programmer](https://justin.abrah.ms/computer-science/big-o-notation-explained.html)
-  * The examples are in python. I know you probably don't know python. That's okay. The syntax is very similar to ruby, but more importantly I think he does a good job explaining what/how big O is/works.
 2. Read [Big-O is easy to calculate, if you know how](https://justin.abrah.ms/computer-science/how-to-calculate-big-o.html)
-  * The examples are in python. I know you probably don't know python. That's okay. The syntax is very similar to ruby, but more importantly I think he does a good job explaining what/how big O is/works.
+
+Here is another explanation to read with Ruby examples.
+
 3. Read [Big O Notation for Newbies with Ruby](https://devblast.com/b/big-o-notation-complexity-ruby)
-  * Here is another explanation with Ruby examples
-4. Work through [this quiz](http://www.codequizzes.com/computer-science/beginner/big-o-algorithms) on Big O. Try out the code snippets below and verify your answers.
+
+4. Work through [this quiz](http://www.codequizzes.com/computer-science/beginner/big-o-algorithms) on Big O. 
 
 
-## Determine the big O
-Give the efficiency of each of the following code snippets.
+## Release 1 : Determine the big O
+Give the efficiency of each of the following code snippets. Try out the code snippets below and verify your answers. 
 
 ### Explanations
 [Explanations](explanations.md)
