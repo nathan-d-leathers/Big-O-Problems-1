@@ -48,7 +48,6 @@ end
 def duplicates?(array)
   array.each_with_index do |item1, index1|
     array.each_with_index do |item2, index2|
-      next if index1 == index2
       return true if item1 == item2
     end
   end
