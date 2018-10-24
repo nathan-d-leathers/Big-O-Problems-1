@@ -3,13 +3,12 @@
 ## Snippet 1 -
 ### Big O:
 ### Explanation:
-```ruby
-def largest?(array, value)
-  array.each do |item|
-    return false if item > value
-  end
-  return true
-end
+```python
+def largest(array, value):
+  for item in array:
+    if item > value:
+      return False
+  return True 
 ```
 
 
@@ -17,99 +16,96 @@ end
 ### Big O:
 ### Explanation:
 
-```ruby
-def info_dump(customers)
-  puts "Customer Names: "
-  customers.each do |customer|
-    puts "#{customer[:name]}"
-  end
-  puts "Customer Locations: "
-  customers.each do |customer|
-    puts "#{customer[:country]}"
-  end
-end
+```python
+def info_dump(customers):
+  
+  print('Customer Names:')
+  for customer in customers: 
+    print(customer['name'])
+  
+  print('Customer Locations:')
+  for customer in customers: 
+    print(customer['country'])
+  
 ```
 
 ## Snippet 3 -
 ### Big O:
 ### Explanation:
 
-```ruby
-def first_element_is_red?(array)
-  array[0] == 'red' ? true : false
-end
+```python
+def first_element_is_red(array):
+  return array[0] == 'red' 
 ```
 
 ## Snippet 4 -
 ### Big O:
 ### Explanation:
 
-```ruby
-def duplicates?(array)
-  array.each_with_index do |item1, index1|
-    array.each_with_index do |item2, index2|
-      return true if item1 == item2
-    end
-  end
-  false
-end
-```
+```python
+def duplicates(array):
+  for index1, item1 in enumerate(array):
+    for index2, item2 in enumerate(array):
+      if index1 == index2:
+        continue
+      if item1 == item2:
+        return True
+  return False
+``` 
 
 ## Snippet 5 -
 ### Big O:
 ### Explanation:
 
-```ruby
-words = [chocolate, coconut, rainbow]
-endings = [cookie, pie, waffle]
+```python
+words = ['chocolate', 'coconut', 'rainbow']
+endings = ['cookie', 'pie', 'waffle']
 
-words.each do |word|
-  endings.each do |ending|
-    puts word + ending
-  end
-end
+for word in words:
+  for ending in endings:
+    print(word + ending)
+
 ```
 
 ## Snippet 6 -
 ### Big O:
 ### Explanation:
 
-```ruby
+```python
 numbers = [1,2,3,4,5,6,7,8,9,10]
 
-def print_array(array)
-    array.each {|num| puts num}
-end
+def print_array(array):
+  for item in array:
+    print(item)
+
 ```
 
 ## Snippet 7 -
 ### Big O:
 ### Explanation:
 
-```ruby
+```python
 # this is insertion sort
-(2...num.length).each do |j|
-    key = num[j]
-    i = j - 1
-    while i > 0 and num[i] > key
-        num[i+1] = num[i]
-        i = i - 1
-    end
-    num[i+1] = key
-end
+def insertionSort(arr): 
+  for i in range(1, len(arr)): 
+    key = arr[i] 
+    j = i-1
+    while j >=0 and key < arr[j] : 
+      arr[j+1] = arr[j] 
+      j -= 1
+    arr[j+1] = key 
 ```
 
 ## Snippet 8 -
 ### Big O:
 ### Explanation:
 
-```ruby
-# this is selection sort
-n.times do |i|
-  index_min = i
-  (i + 1).upto(n-1) do |j|
-    index_min = j if a[j] < a[index_min]
-  end
-  a[i], a[index_min] = a[index_min], a[i] if index_min != i
-end
+```python
+for i in range(len(my_list)):
+  min_idx = i
+  for j in range(i+1, len(my_list)):
+      if my_list[min_idx] > my_list[j]:
+          min_idx = j
+
+  my_list[i], my_list[min_idx] = my_list[min_idx], my_list[i]
 ```

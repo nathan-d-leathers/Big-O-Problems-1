@@ -2,16 +2,9 @@
 
 ## Release 0 : What is Big-O?
 
-_The examples used in the first two articles are in python. I know you probably don't know python. That's okay. The syntax is very similar to ruby, but more importantly I think he does a good job explaining what big O is, and how it works._
 
 1. Read [Big-O notation explained by a self-taught programmer](https://justin.abrah.ms/computer-science/big-o-notation-explained.html)
 2. Read [Big-O is easy to calculate, if you know how](https://justin.abrah.ms/computer-science/how-to-calculate-big-o.html)
-
-Here is another explanation to read with Ruby examples.
-
-3. Read [Big O Notation for Newbies with Ruby](https://devblast.com/b/big-o-notation-complexity-ruby)
-
-4. Work through [this quiz](http://www.codequizzes.com/computer-science/beginner/big-o-algorithms) on Big O. 
 
 
 ## Release 1 : Determine the big O
@@ -23,95 +16,91 @@ Give the efficiency of each of the following code snippets. Try out the code sni
 ### Problems for you
 
 Snippet 1 - Big O:
-```ruby
-def largest?(array, value)
-  array.each do |item|
-    return false if item > value
-  end
-  return true
-end
+
+```python
+def largest(array, value):
+  for item in array:
+    if item > value:
+      return False
+  return True 
 ```
 
 Snippet 2 - Big O:
-```ruby
-def info_dump(customers)
-  puts "Customer Names: "
-  customers.each do |customer|
-    puts "#{customer[:name]}"
-  end
-  puts "Customer Locations: "
-  customers.each do |customer|
-    puts "#{customer[:country]}"
-  end
-end
+
+```python
+def info_dump(customers):
+  
+  print('Customer Names:')
+  for customer in customers: 
+    print(customer['name'])
+  
+  print('Customer Locations:')
+  for customer in customers: 
+    print(customer['country'])
+  
 ```
 
 Snippet 3 - Big O:
-```ruby
-def first_element_is_red?(array)
-  array[0] == 'red' ? true : false
-end
+```python
+def first_element_is_red(array):
+  return array[0] == 'red' 
 ```
 
 Snippet 4 - Big O:
-```ruby
-def duplicates?(array)
-  array.each_with_index do |item1, index1|
-    array.each_with_index do |item2, index2|
-      next if index1 == index2
-      return true if item1 == item2
-    end
-  end
-  false
-end
+```python
+def duplicates(array):
+  for index1, item1 in enumerate(array):
+    for index2, item2 in enumerate(array):
+      if index1 == index2:
+        continue
+      if item1 == item2:
+        return True
+  return False
 ```
 
 Snippet 5 - Big O:
-```ruby
-words = [chocolate, coconut, rainbow]
-endings = [cookie, pie, waffle]
+```python
+words = ['chocolate', 'coconut', 'rainbow']
+endings = ['cookie', 'pie', 'waffle']
 
-words.each do |word|
-  endings.each do |ending|
-    puts word + ending
-  end
-end
+for word in words:
+  for ending in endings:
+    print(word + ending)
+
 ```
 
 Snippet 6 - Big O:
-```ruby
+```python
 numbers = [1,2,3,4,5,6,7,8,9,10]
 
-def print_array(array)
-    array.each {|num| puts num}
-end
+def print_array(array):
+  for item in array:
+    print(item)
+
 ```
 
 Snippet 7 - Big O:
-```ruby
+
+```python
 # this is insertion sort
-(2...num.length).each do |j|
-    key = num[j]
-    i = j - 1
-    while i > 0 and num[i] > key
-        num[i+1] = num[i]
-        i = i - 1
-    end
-    num[i+1] = key
-end
+def insertionSort(arr): 
+  for i in range(1, len(arr)): 
+    key = arr[i] 
+    j = i-1
+    while j >=0 and key < arr[j] : 
+      arr[j+1] = arr[j] 
+      j -= 1
+    arr[j+1] = key 
 ```
 
 Snippet 8 - Big O:
-```ruby
-# this is selection sort
-n.times do |i|
-  index_min = i
-  (i + 1).upto(n-1) do |j|
-    index_min = j if a[j] < a[index_min]
-  end
-  a[i], a[index_min] = a[index_min], a[i] if index_min != i
-end
+```python
+for i in range(len(my_list)):
+  min_idx = i
+  for j in range(i+1, len(my_list)):
+      if my_list[min_idx] > my_list[j]:
+          min_idx = j
+
+  my_list[i], my_list[min_idx] = my_list[min_idx], my_list[i]
 ```
 
-
-Adapted from [Ada Developers Academy](http://adadevelopersacademy.org/)
